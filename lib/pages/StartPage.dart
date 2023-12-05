@@ -20,9 +20,9 @@ class StartPageState extends State<StartPage> with TickerProviderStateMixin {
     super.initState();
 
     _scaleController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 800));
+        AnimationController(vsync: this, duration: Duration(milliseconds: 50));
 
-    _scaleAnimation = Tween<double>(begin: 1.0, end: 30.0)
+    _scaleAnimation = Tween<double>(begin: 1.0, end: 20.0)
         .animate(_scaleController)
       ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
@@ -53,9 +53,9 @@ class StartPageState extends State<StartPage> with TickerProviderStateMixin {
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
                 FadeInUp(
-                    duration: Duration(milliseconds: 100),
+                    duration: Duration(milliseconds: 50),
                     child: Text(
-                      "Pharma Connect",
+                      "E-Library",
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 50,
@@ -65,7 +65,7 @@ class StartPageState extends State<StartPage> with TickerProviderStateMixin {
                   height: 20,
                 ),
                 FadeInUp(
-                    duration: Duration(milliseconds: 130),
+                    duration: Duration(milliseconds: 50),
                     child: Text(
                       "Online Library Store.",
                       style: TextStyle(color: Colors.white, fontSize: 30),
@@ -85,7 +85,7 @@ class StartPageState extends State<StartPage> with TickerProviderStateMixin {
                     builder: (context, child) => Transform.scale(
                       scale: _scaleAnimation.value,
                       child: FadeInUp(
-                          duration: Duration(milliseconds: 1),
+                          duration: Duration(milliseconds: 50),
                           child: Container(
                             height: 50,
                             decoration: BoxDecoration(
@@ -108,7 +108,7 @@ class StartPageState extends State<StartPage> with TickerProviderStateMixin {
                   height: 20,
                 ),
                 FadeInUp(
-                    duration: Duration(milliseconds: 1),
+                    duration: Duration(milliseconds: 10),
                     child: Container(
                       height: 50,
                       decoration: BoxDecoration(

@@ -1,5 +1,5 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:assignment/pages/StartPage.dart';
+import 'package:assignment/pages/ProductView.dart';
 import 'package:flutter/material.dart';
 
 class CategoryPage extends StatefulWidget {
@@ -138,7 +138,7 @@ class _CategoryPageState extends State<CategoryPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => StartPage()));
+                                  builder: (context) => ProductView()));
                         },
                         child: makeProduct(
                             image: 'assets/images/Book1.png',
@@ -152,7 +152,7 @@ class _CategoryPageState extends State<CategoryPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => StartPage()));
+                                  builder: (context) => ProductView()));
                         },
                         child: makeProduct(
                             image: 'assets/images/Book1.png',
@@ -166,7 +166,7 @@ class _CategoryPageState extends State<CategoryPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => StartPage()));
+                                  builder: (context) => ProductView()));
                         },
                         child: makeProduct(
                             image: 'assets/images/Book1.png',
@@ -180,7 +180,7 @@ class _CategoryPageState extends State<CategoryPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => StartPage()));
+                                  builder: (context) => ProductView()));
                         },
                         child: makeProduct(
                             image: 'assets/images/Book1.png',
@@ -194,7 +194,7 @@ class _CategoryPageState extends State<CategoryPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => StartPage()));
+                                  builder: (context) => ProductView()));
                         },
                         child: makeProduct(
                             image: 'assets/images/Book1.png',
