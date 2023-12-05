@@ -39,8 +39,7 @@ class StartPageState extends State<StartPage> with TickerProviderStateMixin {
         width: double.infinity,
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/getstart_page.jpg'),
-                fit: BoxFit.cover)),
+                image: AssetImage('assets/images/L2.jpg'), fit: BoxFit.cover)),
         child: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(begin: Alignment.bottomRight, colors: [
@@ -54,7 +53,7 @@ class StartPageState extends State<StartPage> with TickerProviderStateMixin {
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
                 FadeInUp(
-                    duration: Duration(milliseconds: 1000),
+                    duration: Duration(milliseconds: 100),
                     child: Text(
                       "Pharma Connect",
                       style: TextStyle(
@@ -66,9 +65,9 @@ class StartPageState extends State<StartPage> with TickerProviderStateMixin {
                   height: 20,
                 ),
                 FadeInUp(
-                    duration: Duration(milliseconds: 1300),
+                    duration: Duration(milliseconds: 130),
                     child: Text(
-                      "Online Pharma Store.",
+                      "Online Library Store.",
                       style: TextStyle(color: Colors.white, fontSize: 30),
                     )),
                 SizedBox(
@@ -86,7 +85,7 @@ class StartPageState extends State<StartPage> with TickerProviderStateMixin {
                     builder: (context, child) => Transform.scale(
                       scale: _scaleAnimation.value,
                       child: FadeInUp(
-                          duration: Duration(milliseconds: 1500),
+                          duration: Duration(milliseconds: 1),
                           child: Container(
                             height: 50,
                             decoration: BoxDecoration(
@@ -109,7 +108,7 @@ class StartPageState extends State<StartPage> with TickerProviderStateMixin {
                   height: 20,
                 ),
                 FadeInUp(
-                    duration: Duration(milliseconds: 1700),
+                    duration: Duration(milliseconds: 1),
                     child: Container(
                       height: 50,
                       decoration: BoxDecoration(

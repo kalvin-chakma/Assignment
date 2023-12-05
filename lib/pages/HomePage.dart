@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    Timer.periodic(const Duration(seconds: 30), (timer) {
+    Timer.periodic(const Duration(seconds: 5), (timer) {
       setState(() {
         activeIndex++;
 
@@ -28,6 +28,15 @@ class _HomePageState extends State<HomePage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        title: Text("E library"),
+        titleTextStyle: TextStyle(
+            color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
+        elevation: 00,
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -167,7 +176,7 @@ class _HomePageState extends State<HomePage> {
                                 image: 'assets/images/newspaper.png',
                                 title: 'Perfume'),
                             makeBestCategory(
-                                image: 'assets/images/story.png',
+                                image: 'assets/images/story.jpeg',
                                 title: 'Story'),
                           ],
                         ),
@@ -180,6 +189,23 @@ class _HomePageState extends State<HomePage> {
                 ))
           ],
         ),
+      ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+        child: BottomNavigationBar(items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite_sharp),
+            label: 'Favourite',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'Education',
+          ),
+        ]),
       ),
     );
   }

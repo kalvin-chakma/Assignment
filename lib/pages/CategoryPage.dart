@@ -1,4 +1,5 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:assignment/pages/StartPage.dart';
 import 'package:flutter/material.dart';
 
 class CategoryPage extends StatefulWidget {
@@ -49,7 +50,7 @@ class _CategoryPageState extends State<CategoryPage> {
                             IconButton(
                               icon: Icon(
                                 Icons.arrow_back_ios,
-                                color: Colors.black,
+                                color: Colors.white,
                               ),
                               onPressed: () {
                                 Navigator.pop(context);
@@ -62,7 +63,7 @@ class _CategoryPageState extends State<CategoryPage> {
                                     duration: Duration(milliseconds: 1200),
                                     child: IconButton(
                                       icon: Icon(Icons.search,
-                                          color: Colors.black),
+                                          color: Colors.white),
                                       onPressed: () {},
                                     )),
                                 FadeInUp(
@@ -70,7 +71,7 @@ class _CategoryPageState extends State<CategoryPage> {
                                     child: IconButton(
                                       icon: Icon(
                                         Icons.favorite,
-                                        color: Colors.black,
+                                        color: Colors.white,
                                       ),
                                       onPressed: () {},
                                     )),
@@ -87,18 +88,6 @@ class _CategoryPageState extends State<CategoryPage> {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 40,
-                        ),
-                        FadeInUp(
-                            duration: Duration(milliseconds: 1200),
-                            child: Text(
-                              widget.title!,
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 40),
-                            ))
                       ],
                     ),
                   ),
@@ -143,35 +132,75 @@ class _CategoryPageState extends State<CategoryPage> {
                     height: 20,
                   ),
                   FadeInUp(
-                      duration: Duration(milliseconds: 1500),
-                      child: makeProduct(
-                          image: 'assets/images/Book1.png',
-                          title: 'Book1',
-                          price: '100\৳')),
-                  FadeInUp(
-                      duration: Duration(milliseconds: 1600),
-                      child: makeProduct(
-                          image: 'assets/images/Book2.png',
-                          title: 'Book2',
-                          price: '100\৳')),
-                  FadeInUp(
-                      duration: Duration(milliseconds: 1700),
-                      child: makeProduct(
-                          image: 'assets/images/Book3.png',
-                          title: 'Book3',
-                          price: '100\৳')),
-                  FadeInUp(
-                      duration: Duration(milliseconds: 1800),
-                      child: makeProduct(
-                          image: 'assets/images/Book4.png',
-                          title: 'Book4',
-                          price: '100\৳')),
+                      duration: Duration(milliseconds: 1900),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => StartPage()));
+                        },
+                        child: makeProduct(
+                            image: 'assets/images/Book1.png',
+                            title: 'Book-31',
+                            price: '100\৳'),
+                      )),
                   FadeInUp(
                       duration: Duration(milliseconds: 1900),
-                      child: makeProduct(
-                          image: 'assets/images/Book1.png',
-                          title: 'Book5',
-                          price: '100\৳')),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => StartPage()));
+                        },
+                        child: makeProduct(
+                            image: 'assets/images/Book1.png',
+                            title: 'Book-2',
+                            price: '100\৳'),
+                      )),
+                  FadeInUp(
+                      duration: Duration(milliseconds: 1900),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => StartPage()));
+                        },
+                        child: makeProduct(
+                            image: 'assets/images/Book1.png',
+                            title: 'Book-3',
+                            price: '100\৳'),
+                      )),
+                  FadeInUp(
+                      duration: Duration(milliseconds: 1900),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => StartPage()));
+                        },
+                        child: makeProduct(
+                            image: 'assets/images/Book1.png',
+                            title: 'Book-4',
+                            price: '100\৳'),
+                      )),
+                  FadeInUp(
+                      duration: Duration(milliseconds: 1900),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => StartPage()));
+                        },
+                        child: makeProduct(
+                            image: 'assets/images/Book1.png',
+                            title: 'Book-55',
+                            price: '100\৳'),
+                      )),
                 ],
               ),
             )
@@ -191,7 +220,7 @@ class _CategoryPageState extends State<CategoryPage> {
             image:
                 DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
         child: Container(
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.all(20),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
               gradient: LinearGradient(begin: Alignment.bottomRight, colors: [
@@ -205,12 +234,14 @@ class _CategoryPageState extends State<CategoryPage> {
               FadeInUp(
                   duration: Duration(milliseconds: 1400),
                   child: Align(
-                    alignment: Alignment.topRight,
-                    child: Icon(
-                      Icons.favorite_border,
-                      color: Colors.white,
-                    ),
-                  )),
+                      alignment: Alignment.topRight,
+                      child: IconButton(
+                        icon: Icon(
+                          Icons.favorite_border,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {},
+                      ))),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -241,15 +272,15 @@ class _CategoryPageState extends State<CategoryPage> {
                           width: 40,
                           height: 40,
                           margin: EdgeInsets.only(bottom: 10),
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle, color: Colors.white),
+                          decoration: BoxDecoration(shape: BoxShape.circle),
                           child: Center(
-                            child: Icon(
-                              Icons.add_shopping_cart,
-                              size: 18,
-                              color: Colors.grey[700],
+                              child: IconButton(
+                            icon: Icon(
+                              Icons.shopping_cart,
+                              color: Colors.white,
                             ),
-                          )))
+                            onPressed: () {},
+                          ))))
                 ],
               ),
             ],
