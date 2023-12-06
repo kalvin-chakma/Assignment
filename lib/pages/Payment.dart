@@ -10,6 +10,7 @@ class Payment extends StatefulWidget {
 class _PaymentState extends State<Payment> {
   @override
   Widget build(BuildContext context) {
+    String dropdownValue = "Dropdown Button";
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -61,9 +62,10 @@ class _PaymentState extends State<Payment> {
                             "username",
                             style: TextStyle(color: Colors.white, fontSize: 30),
                           ),
-                          // Image.network(
-                          //     'https://img.icons8.com/color/2x/mastercard-logo.png',
-                          //     height: 50),
+                          Image(
+                            image: AssetImage("assets/images/mastercard.png"),
+                            height: 20,
+                          )
                         ],
                       )
                     ],
@@ -97,15 +99,12 @@ class _PaymentState extends State<Payment> {
                     children: [
                       GestureDetector(
                         onTap: () {},
-                        child: AnimatedContainer(
-                          duration: Duration(milliseconds: 300),
-                          margin: EdgeInsets.only(right: 10),
-                          padding: EdgeInsets.symmetric(horizontal: 20),
+                        child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
                           ),
                           child: Image(
-                            image: AssetImage("assets/images/p1.png"),
+                            image: AssetImage("assets/images/bkash.png"),
                             height: 30,
                           ),
                         ),
@@ -115,10 +114,48 @@ class _PaymentState extends State<Payment> {
                         child: Container(
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: Colors.red,
                           ),
                           child: Image(
-                            image: AssetImage("assets/images/p1.png"),
+                            image: AssetImage("assets/images/nagad.png"),
+                            height: 30,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                          ),
+                          child: Image(
+                            image: AssetImage("assets/images/rocket.png"),
+                            height: 30,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                          ),
+                          child: Image(
+                            image: AssetImage("assets/images/visa.png"),
+                            height: 30,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                          ),
+                          child: Image(
+                            image: AssetImage("assets/images/mastercard.png"),
                             height: 30,
                             fit: BoxFit.cover,
                           ),
@@ -175,17 +212,33 @@ class _PaymentState extends State<Payment> {
                     "Address",
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
                   ),
-                  TextButton(
-                      onPressed: () {},
-                      child: Row(
-                        children: [
-                          Text("xxxxxxxxxxxxxxxxxx"),
-                          Icon(
-                            Icons.keyboard_arrow_down,
-                            size: 20,
-                          )
-                        ],
-                      ))
+                  DropdownButton<String>(
+                    // Step 3.
+                    value: dropdownValue,
+                    // Step 4.
+                    items: <String>[
+                      'Dropdown Button',
+                      'Dhaka',
+                      'Chittagong',
+                      'Sylhet',
+                      'Rajshahi',
+                      'Cumilla'
+                    ].map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(
+                          value,
+                          style: TextStyle(fontSize: 15, color: Colors.blue),
+                        ),
+                      );
+                    }).toList(),
+                    // Step 5.
+                    onChanged: (String? newValue) {
+                      setState(() {
+                        dropdownValue = newValue!;
+                      });
+                    },
+                  ),
                 ],
               ),
             ),

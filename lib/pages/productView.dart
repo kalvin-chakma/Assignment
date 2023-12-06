@@ -82,7 +82,7 @@ class _ProductViewState extends State<ProductView> {
                 color: Colors.black12,
                 height: 70,
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     InkWell(
                       child: Container(
